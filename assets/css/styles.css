@@ -202,6 +202,19 @@ button {
   font-size: 0.88rem;
 }
 
+.button.disabled {
+  cursor: default;
+  color: var(--muted);
+  background: rgba(255, 250, 240, 0.62);
+}
+
+.button.disabled:hover,
+.button.disabled:focus-visible {
+  transform: none;
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+
 .mobile-toggle {
   display: none;
   width: 42px;
