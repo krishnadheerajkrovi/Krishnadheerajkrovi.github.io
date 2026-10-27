@@ -1,165 +1,51 @@
-const navLinks = document.querySelector("#navLinks");
-const navToggle = document.querySelector(".mobile-toggle");
-const sectionLinks = [...document.querySelectorAll(".nav-links a")];
-
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-  navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-});
-
-sectionLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Open navigation");
-  });
-});
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-function revealWhenInView(node) {
-  const rect = node.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    node.classList.add("is-visible");
-    return;
-  }
-  revealObserver.observe(node);
+import {answerQuestion} from './knowledge.mjs';
+const nav = document.querySelector('#nav-links');
+const toggle = document.querySelector('.menu-toggle');
+function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',event=>{if(event.key==='Escape' && nav.classList.contains('open')){closeMenu();toggle.focus();}});
+document.addEventListener('click',event=>{if(!event.target.closest('.nav'))closeMenu();});
+const cards=[...document.querySelectorAll('[data-category]')];
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+  const filter=button.dataset.filter;
+  document.querySelectorAll('[data-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+  cards.forEach(card=>card.hidden=filter!=='all' && card.dataset.category!==filter);
+  document.querySelector('#filter-status').textContent=`Showing ${cards.filter(c=>!c.hidden).length} projects.`;
+}));
+const form=document.querySelector('#question-form');
+const input=document.querySelector('#question');
+const output=document.querySelector('#answer');
+const submit=document.querySelector('#ask-button');
+let knowledge;
+let knowledgePromise;
+function loadKnowledge(){
+  if(!knowledgePromise)knowledgePromise=fetch(new URL('../data/public-knowledge.json',import.meta.url)).then(r=>{if(!r.ok)throw new Error('Knowledge unavailable');return r.json();}).then(data=>{if(!Array.isArray(data.records))throw new Error('Invalid knowledge');knowledge=data;return data;}).catch(error=>{knowledgePromise=null;throw error;});
+  return knowledgePromise;
 }
-
-document.querySelectorAll(".reveal").forEach(revealWhenInView);
-window.addEventListener("pageshow", () => {
-  document.querySelectorAll(".reveal:not(.is-visible)").forEach(revealWhenInView);
-});
-
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      sectionLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
-      });
-    });
-  },
-  { rootMargin: "-42% 0px -50% 0px", threshold: 0.01 }
-);
-
-["impact", "work", "projects", "skills", "contact"].forEach((id) => {
-  const section = document.getElementById(id);
-  if (section) navObserver.observe(section);
-});
-
-const canvas = document.getElementById("signal-canvas");
-const ctx = canvas.getContext("2d");
-const panel = canvas.parentElement;
-const colors = ["#16735f", "#285aa9", "#ad493d", "#a46b14", "#6653a5"];
-let nodes = [];
-let width = 0;
-let height = 0;
-let frame = 0;
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function resizeCanvas() {
-  const rect = panel.getBoundingClientRect();
-  const ratio = Math.min(window.devicePixelRatio || 1, 2);
-  width = Math.max(320, rect.width);
-  height = Math.max(360, rect.height);
-  canvas.width = Math.floor(width * ratio);
-  canvas.height = Math.floor(height * ratio);
-  canvas.style.width = `${width}px`;
-  canvas.style.height = `${height}px`;
-  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-
-  const count = Math.round(Math.min(38, Math.max(18, width / 15)));
-  nodes = Array.from({ length: count }, (_, index) => ({
-    x: 28 + ((index * 83) % Math.max(120, width - 56)),
-    y: 32 + ((index * 137) % Math.max(180, height - 150)),
-    vx: ((index % 5) - 2) * 0.08,
-    vy: (((index + 2) % 7) - 3) * 0.06,
-    size: 4 + (index % 3),
-    color: colors[index % colors.length]
-  }));
-  drawSignal();
-}
-
-function drawSignal() {
-  ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = "rgba(255, 250, 240, 0.2)";
-  ctx.fillRect(0, 0, width, height);
-
-  ctx.strokeStyle = "rgba(23, 33, 31, 0.08)";
-  ctx.lineWidth = 1;
-  for (let x = 0; x < width; x += 36) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, height);
-    ctx.stroke();
-  }
-  for (let y = 0; y < height; y += 36) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(width, y);
-    ctx.stroke();
-  }
-
-  nodes.forEach((node) => {
-    if (!reducedMotion) {
-      node.x += node.vx;
-      node.y += node.vy;
-      if (node.x < 22 || node.x > width - 22) node.vx *= -1;
-      if (node.y < 22 || node.y > height - 170) node.vy *= -1;
-    }
-  });
-
-  for (let i = 0; i < nodes.length; i += 1) {
-    for (let j = i + 1; j < nodes.length; j += 1) {
-      const a = nodes[i];
-      const b = nodes[j];
-      const distance = Math.hypot(a.x - b.x, a.y - b.y);
-      if (distance < 112) {
-        ctx.globalAlpha = Math.max(0, 0.42 - distance / 270);
-        ctx.strokeStyle = a.color;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-    }
-  }
-
-  ctx.globalAlpha = 1;
-  nodes.forEach((node, index) => {
-    const pulse = reducedMotion ? 0 : Math.sin(frame / 22 + index) * 1.2;
-    ctx.fillStyle = node.color;
-    ctx.fillRect(node.x - node.size / 2, node.y - node.size / 2, node.size + pulse, node.size + pulse);
-    ctx.strokeStyle = "rgba(255, 250, 240, 0.9)";
-    ctx.strokeRect(node.x - node.size / 2 - 2, node.y - node.size / 2 - 2, node.size + 4, node.size + 4);
-  });
-
-  ctx.globalAlpha = 0.82;
-  ctx.strokeStyle = "#17211f";
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.moveTo(34, height * 0.2);
-  ctx.bezierCurveTo(width * 0.28, height * 0.08, width * 0.56, height * 0.38, width - 38, height * 0.26);
-  ctx.stroke();
-  ctx.globalAlpha = 1;
-
-  if (!reducedMotion) {
-    frame += 1;
-    requestAnimationFrame(drawSignal);
+function element(tag,text,className){const el=document.createElement(tag);if(text)el.textContent=text;if(className)el.className=className;return el;}
+function render(result){
+  output.replaceChildren();
+  output.append(element('p',result.records.length?'From the public knowledge base':'A note on the evidence','answer-label'),element('p',result.intro));
+  for(const record of result.records){
+    const evidence=element('article',null,'answer-evidence');
+    evidence.append(element('h4',record.title),element('p',record.summary));
+    const tags=element('ul',null,'tags');
+    record.skills.slice(0,5).forEach(skill=>tags.append(element('li',skill)));
+    const link=element('a',`${record.source.label} ↗`,'text-link');
+    // Restrict all source links to page anchors or the owner's public GitHub.
+    if(/^#[a-z][a-z0-9-]*$/.test(record.source.url) || record.source.url.startsWith('https://github.com/krishnadheerajkrovi/'))link.href=record.source.url;
+    if(link.href.startsWith('https://github.com/')){link.target='_blank';link.rel='noreferrer';}
+    evidence.append(tags,link);output.append(evidence);
   }
 }
-
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
+let running=false;
+async function ask(){
+  if(running || !input.value.trim())return;
+  running=true;submit.disabled=true;output.setAttribute('aria-busy','true');
+  try{await loadKnowledge();render(answerQuestion(input.value,knowledge));}
+  catch{output.replaceChildren(element('p','The public knowledge base could not load. Please try again, explore the skills section, or contact Krishna directly.'));}
+  finally{running=false;submit.disabled=false;output.removeAttribute('aria-busy');}
+}
+form.addEventListener('submit',event=>{event.preventDefault();ask();});
+document.querySelectorAll('[data-question]').forEach(button=>button.addEventListener('click',()=>{input.value=button.dataset.question;ask();}));
