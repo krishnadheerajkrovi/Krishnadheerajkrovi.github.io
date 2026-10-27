@@ -1,6 +1,6 @@
 # Career knowledge graph
 
-This directory holds the graph builder, capability ontology, private viewer source, and reviewed public profile. The portfolio and skills Q&A use the public exports from this same repository.
+This directory holds the graph builder, capability ontology, private viewer source, and reviewed public profile. The portfolio and skills explorer use the public exports from this same repository.
 
 ## Public build
 
@@ -9,13 +9,13 @@ Edit `data/public-profile.json` after reviewing verified evidence, then run from
 ```sh
 python3 knowledge-graph/scripts/export_public.py
 python3 knowledge-graph/scripts/export_public.py --check
-node scripts/test-knowledge.mjs
+node scripts/test-explorer.mjs
 python3 -m unittest discover -s knowledge-graph/tests
 ```
 
 The exporter reads only the reviewed profile. It produces:
 
-- `assets/data/public-knowledge.json`: summaries used by portfolio Q&A.
+- `assets/data/public-knowledge.json`: summaries used by the portfolio skill map.
 - `assets/data/public-graph.json`: public Person, Project, Evidence, and Skill nodes and their relationships.
 
 Review remains explicit: private evidence never automatically becomes public, and repository signals never automatically become verified public claims.
