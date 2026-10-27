@@ -55,7 +55,7 @@ function selectTopic(id) {
 }
 nodes.forEach(node=>node.addEventListener('click',()=>selectTopic(node.dataset.topic)));
 document.querySelectorAll('[data-select-topic]').forEach(link=>link.addEventListener('click',()=>selectTopic(link.dataset.selectTopic)));
-fetch(new URL('../data/public-knowledge.json',import.meta.url))
+fetch(new URL('../data/public-knowledge.json',import.meta.url),{cache:'no-cache'})
   .then(response=>{if(!response.ok)throw new Error('Public profile unavailable');return response.json();})
   .then(data=>{if(!Array.isArray(data.records))throw new Error('Invalid public profile');profile=data;selectTopic(selectedTopic);})
   .catch(()=>{panel.replaceChildren(element('h3','Explore the skills behind the work'),element('p','The map details couldn’t load. You can still explore the capabilities and projects on this page.'));const link=element('a','Browse capabilities ↗','text-link');link.href='#skills';panel.append(link);});
