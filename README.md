@@ -27,4 +27,4 @@ node scripts/test-explorer.mjs
 
 Edit `knowledge-graph/data/public-profile.json` after reviewing verified evidence, then run `python3 knowledge-graph/scripts/export_public.py`. This generates both the public graph and the summaries displayed by the topic explorer from one reviewed source.
 
-The clickable skill map displays reviewed summaries and project links in the visitor's browser. It does not connect to private repositories. Public exports are deterministic and require review before new evidence is added. The page stays readable without JavaScript; project filters and topic interactions require JavaScript.
+The clickable skill map displays reviewed summaries and project links in the visitor's browser. It does not connect to private repositories. Public exports are deterministic and require review before new evidence is added. The page stays readable without JavaScript; topic interactions require JavaScript.
