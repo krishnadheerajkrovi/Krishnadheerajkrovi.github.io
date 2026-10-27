@@ -905,3 +905,12 @@ footer {
     animation-iteration-count: 1 !important;
   }
 }
+
+.capability-summary p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.toolkit-heading {
+  margin: 32px 0 18px;
+}
