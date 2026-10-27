@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-26",
+  "scope": "Reviewed public skills and project summaries. Confidential source material is excluded.",
+  "records": [
+    {
+      "id": "capability-1",
+      "title": "Agent orchestration",
+      "summary": "Built stateful multi-agent workflows with checkpoints, human approvals, bounded retries, and resumable execution.",
+      "skills": [
+        "LangGraph",
+        "Multi-Agent Systems",
+        "Human-in-the-Loop",
+        "PostgreSQL",
+        "Reliability",
+        "Token Budgets"
+      ],
+      "aliases": "agents agentic orchestration state machines checkpointing human approvals autonomous workflows",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-2",
+      "title": "Secure tool integrations",
+      "summary": "Implemented MCP integrations with OAuth 2.1, PKCE, scoped access, and per-user authorization.",
+      "skills": [
+        "Python",
+        "MCP",
+        "OAuth 2.1",
+        "PKCE",
+        "Tool Calling",
+        "API Security"
+      ],
+      "aliases": "model context protocol authentication security secure oauth permissions authorization",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-3",
+      "title": "Model and tool calling",
+      "summary": "Built provider-compatible tool-calling runners with guarded functions, turn limits, repeat-call controls, and model routing.",
+      "skills": [
+        "Tool Calling",
+        "OpenAI",
+        "Ollama",
+        "Agent Loops",
+        "Guardrails",
+        "Python"
+      ],
+      "aliases": "function calling llm model providers local models tools",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-4",
+      "title": "Retrieval and knowledge systems",
+      "summary": "Built hybrid retrieval using embeddings, vector search, full-text search, reciprocal-rank fusion, and knowledge graphs.",
+      "skills": [
+        "RAG",
+        "Embeddings",
+        "pgvector",
+        "PostgreSQL",
+        "Knowledge Graph",
+        "Evaluation",
+        "Reciprocal Rank Fusion"
+      ],
+      "aliases": "retrieval augmented generation semantic search vector database hybrid rag",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-5",
+      "title": "AI evaluation and reliability",
+      "summary": "Designed regression datasets, grounding checks, citation gates, and end-to-end evaluation scenarios for AI workflows.",
+      "skills": [
+        "LLM Evaluation",
+        "Grounding",
+        "Regression Testing",
+        "CI/CD",
+        "Citation Gates",
+        "Datasets"
+      ],
+      "aliases": "evals evaluation testing hallucinations grounding citations validation quality",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-6",
+      "title": "Streaming application interfaces",
+      "summary": "Built live interfaces for model output, tool activity, approvals, cancellation, and checkpoint-based workflow recovery.",
+      "skills": [
+        "React",
+        "Next.js",
+        "FastAPI",
+        "SSE",
+        "Streaming APIs",
+        "Agent UX"
+      ],
+      "aliases": "frontend front end ui interfaces streaming real time server sent events web development",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-7",
+      "title": "Cloud workflow orchestration",
+      "summary": "Built cloud workflows with checkpointed steps, escalation, stall detection, bounded retries, and execution budgets.",
+      "skills": [
+        "AWS",
+        "Step Functions",
+        "Bedrock AgentCore",
+        "Cloud Architecture",
+        "Reliability",
+        "Cost Controls"
+      ],
+      "aliases": "cloud aws bedrock step functions deployment resilience cost controls",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-8",
+      "title": "Observability",
+      "summary": "Instrumented services with traces, metrics, structured logs, request IDs, alerts, and dashboards.",
+      "skills": [
+        "OpenTelemetry",
+        "Prometheus",
+        "Grafana",
+        "Observability",
+        "Structured Logging"
+      ],
+      "aliases": "monitoring tracing logs metrics observability",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-9",
+      "title": "Resumable workflows",
+      "summary": "Built state-machine workflows with retries, pause-for-clarification, approval steps, and an operator interface.",
+      "skills": [
+        "LangGraph",
+        "FastAPI",
+        "Human-in-the-Loop",
+        "State Machines",
+        "Alpine.js"
+      ],
+      "aliases": "orchestration workflows human approvals state machines",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-10",
+      "title": "Authorized enterprise APIs",
+      "summary": "Built AI-callable data-platform tools with per-user authentication and role-based authorization.",
+      "skills": [
+        "MCP",
+        "FastAPI",
+        "Keycloak",
+        "Authorization",
+        "Enterprise Integration"
+      ],
+      "aliases": "mcp security authentication permissions authorization keycloak",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#skills"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-11",
+      "title": "Backend and data engineering",
+      "summary": "Delivered production REST APIs in Python and Java, with Elasticsearch, Redis caching, and Spark parallel processing.",
+      "skills": [
+        "Python",
+        "Java",
+        "REST APIs",
+        "Redis",
+        "Spark",
+        "Elasticsearch",
+        "Backend Engineering"
+      ],
+      "aliases": "backend back end api apis data engineering caching databases distributed systems",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#experience"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "capability-12",
+      "title": "Delivery and quality gates",
+      "summary": "Built CI/CD workflows with automated test, secret, dependency, and deployment checks.",
+      "skills": [
+        "CI/CD",
+        "Jenkins",
+        "GitHub Actions",
+        "Bitbucket Pipelines",
+        "Security Testing"
+      ],
+      "aliases": "devops continuous integration continuous delivery release pipelines deployment safety",
+      "source": {
+        "label": "Public skills summary",
+        "url": "#experience"
+      },
+      "kind": "verified-capability"
+    },
+    {
+      "id": "rag-lab",
+      "title": "Local RAG Lab",
+      "summary": "A public Python lab demonstrating hybrid, long-context, and contextual retrieval with local models, cited answers, and output validation.",
+      "skills": [
+        "Python",
+        "RAG",
+        "Ollama",
+        "pgvector",
+        "PostgreSQL"
+      ],
+      "aliases": "projects public projects retrieval hybrid search rag citations local models",
+      "source": {
+        "label": "Public repository",
+        "url": "https://github.com/krishnadheerajkrovi/mastering_rag"
+      },
+      "kind": "public-project"
+    },
+    {
+      "id": "rag-chatbot",
+      "title": "Multi-user RAG Chatbot",
+      "summary": "A public document Q&A application with JWT authentication, history-aware retrieval, local models, persistent storage, and Docker Compose.",
+      "skills": [
+        "FastAPI",
+        "Streamlit",
+        "LangChain",
+        "LangGraph",
+        "Ollama",
+        "PostgreSQL",
+        "Chroma",
+        "Docker"
+      ],
+      "aliases": "projects public projects chatbot document qa authentication rag docker",
+      "source": {
+        "label": "Public repository",
+        "url": "https://github.com/krishnadheerajkrovi/rag-chatbot"
+      },
+      "kind": "public-project"
+    }
+  ]
+}

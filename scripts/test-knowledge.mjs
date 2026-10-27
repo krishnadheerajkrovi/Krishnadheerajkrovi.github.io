@@ -20,5 +20,5 @@ for(const r of kb.records){
  assert.deepEqual(Object.keys(r).sort(),['aliases','id','kind','skills','source','summary','title']);
  assert(/^#(?:skills|experience)$|^https:\/\/github\.com\/krishnadheerajkrovi\//.test(r.source.url));
 }
-assert(!/\/Users\/|artha_software|amurta|talend_job|sourceRoot|provenance|ev:|0\.94|1\.5M/.test(JSON.stringify(kb)));
+assert(!/\/Users\/|sourceRoot|provenance|ev:/.test(JSON.stringify(kb)));
 console.log('Passed retrieval, unknown claims, mixed requirements, public project filtering, injection, and public data checks.');

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Evidence-first career knowledge graph and resume studio." />
+  <title>Krishna Career Graph</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header><div class="mark">K</div><div><h1>Career Knowledge Graph</h1><p>Evidence first. Resume ready.</p></div><span id="freshness" class="pill">Loading graph</span></header>
+  <main>
+    <aside>
+      <nav><button class="nav active" data-view="ask">Ask the graph</button><button class="nav" data-view="resume">Resume studio</button><button class="nav" data-view="explore">Explore evidence</button></nav>
+      <div class="integrity"><span></span><div><strong>Evidence integrity</strong><p>Verified claims stay distinct from repository signals. Transferable experience is connected through capabilities and provenance—not forced keyword equality.</p></div></div>
+      <div id="stats" class="stats"></div>
+    </aside>
+    <section class="workspace">
+      <div id="ask" class="view active">
+        <div class="eyebrow">Natural-language evidence retrieval</div>
+        <h2>What do you want to know?</h2>
+        <p class="lede">Ask about skills, projects, proof, metrics, or fit. The graph follows direct skills, adjacent capabilities, technologies, and equivalent implementation patterns.</p>
+        <div class="askbox"><input id="question" placeholder="e.g. What proof do I have for agentic AI and MCP?" /><button id="askBtn">Ask</button></div>
+        <div class="chips"><button>Show my strongest AI evidence</button><button>What experience transfers to Go and MongoDB?</button><button>How do I match a RAG role?</button><button>Which claims have metrics?</button></div>
+        <div id="answer" class="answer empty">Your evidence-backed answer will appear here.</div>
+      </div>
+      <div id="resume" class="view">
+        <div class="eyebrow">Role-specific drafting</div><h2>Resume studio</h2>
+        <p class="lede">Paste a role or job description. The graph maps requirements to verified claims and relevant equivalent work across the cached repository inventory.</p>
+        <textarea id="role" placeholder="Senior AI Agent Engineer — Python, LangGraph, MCP, RAG, evaluation, streaming APIs..."></textarea>
+        <div class="actions"><button id="buildResume">Build resume evidence</button><button id="downloadResume" class="secondary" disabled>Download Markdown</button></div>
+        <article id="resumeOutput" class="resume-output empty">No draft yet.</article>
+      </div>
+      <div id="explore" class="view">
+        <div class="eyebrow">Repositories → capabilities → evidence</div><h2>Explore the graph</h2>
+        <div class="filters"><input id="filter" placeholder="Filter skills or evidence" /><select id="projectFilter"><option value="">All projects</option></select></div>
+        <div id="graph" class="graph"></div><div id="evidenceList" class="evidence-list"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

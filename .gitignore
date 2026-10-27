@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+# All confidential evidence and deployment state belongs outside this checkout.
+.private/
+private/
+.local/
+.openai/
+**/curated_evidence.json
+**/*repository_inventory.json
+**/knowledge_graph.json
+*.bundle
+*.tar.gz

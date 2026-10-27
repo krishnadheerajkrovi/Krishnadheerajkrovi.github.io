@@ -1,0 +1,931 @@
+{
+  "@context": {
+    "name": "https://schema.org/name",
+    "description": "https://schema.org/description",
+    "url": "https://schema.org/url"
+  },
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "scope": "Reviewed public skills and project summaries. Confidential source material is excluded.",
+  "nodes": [
+    {
+      "@id": "person:krishna",
+      "@type": "Person",
+      "name": "Krishna Dheeraj Krovi"
+    },
+    {
+      "@id": "public:capability-1",
+      "@type": "Evidence",
+      "name": "Agent orchestration",
+      "description": "Built stateful multi-agent workflows with checkpoints, human approvals, bounded retries, and resumable execution.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:1",
+      "@type": "Skill",
+      "name": "LangGraph"
+    },
+    {
+      "@id": "skill:2",
+      "@type": "Skill",
+      "name": "Multi-Agent Systems"
+    },
+    {
+      "@id": "skill:3",
+      "@type": "Skill",
+      "name": "Human-in-the-Loop"
+    },
+    {
+      "@id": "skill:4",
+      "@type": "Skill",
+      "name": "PostgreSQL"
+    },
+    {
+      "@id": "skill:5",
+      "@type": "Skill",
+      "name": "Reliability"
+    },
+    {
+      "@id": "skill:6",
+      "@type": "Skill",
+      "name": "Token Budgets"
+    },
+    {
+      "@id": "public:capability-2",
+      "@type": "Evidence",
+      "name": "Secure tool integrations",
+      "description": "Implemented MCP integrations with OAuth 2.1, PKCE, scoped access, and per-user authorization.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:7",
+      "@type": "Skill",
+      "name": "Python"
+    },
+    {
+      "@id": "skill:8",
+      "@type": "Skill",
+      "name": "MCP"
+    },
+    {
+      "@id": "skill:9",
+      "@type": "Skill",
+      "name": "OAuth 2.1"
+    },
+    {
+      "@id": "skill:10",
+      "@type": "Skill",
+      "name": "PKCE"
+    },
+    {
+      "@id": "skill:11",
+      "@type": "Skill",
+      "name": "Tool Calling"
+    },
+    {
+      "@id": "skill:12",
+      "@type": "Skill",
+      "name": "API Security"
+    },
+    {
+      "@id": "public:capability-3",
+      "@type": "Evidence",
+      "name": "Model and tool calling",
+      "description": "Built provider-compatible tool-calling runners with guarded functions, turn limits, repeat-call controls, and model routing.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:13",
+      "@type": "Skill",
+      "name": "OpenAI"
+    },
+    {
+      "@id": "skill:14",
+      "@type": "Skill",
+      "name": "Ollama"
+    },
+    {
+      "@id": "skill:15",
+      "@type": "Skill",
+      "name": "Agent Loops"
+    },
+    {
+      "@id": "skill:16",
+      "@type": "Skill",
+      "name": "Guardrails"
+    },
+    {
+      "@id": "public:capability-4",
+      "@type": "Evidence",
+      "name": "Retrieval and knowledge systems",
+      "description": "Built hybrid retrieval using embeddings, vector search, full-text search, reciprocal-rank fusion, and knowledge graphs.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:17",
+      "@type": "Skill",
+      "name": "RAG"
+    },
+    {
+      "@id": "skill:18",
+      "@type": "Skill",
+      "name": "Embeddings"
+    },
+    {
+      "@id": "skill:19",
+      "@type": "Skill",
+      "name": "pgvector"
+    },
+    {
+      "@id": "skill:20",
+      "@type": "Skill",
+      "name": "Knowledge Graph"
+    },
+    {
+      "@id": "skill:21",
+      "@type": "Skill",
+      "name": "Evaluation"
+    },
+    {
+      "@id": "skill:22",
+      "@type": "Skill",
+      "name": "Reciprocal Rank Fusion"
+    },
+    {
+      "@id": "public:capability-5",
+      "@type": "Evidence",
+      "name": "AI evaluation and reliability",
+      "description": "Designed regression datasets, grounding checks, citation gates, and end-to-end evaluation scenarios for AI workflows.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:23",
+      "@type": "Skill",
+      "name": "LLM Evaluation"
+    },
+    {
+      "@id": "skill:24",
+      "@type": "Skill",
+      "name": "Grounding"
+    },
+    {
+      "@id": "skill:25",
+      "@type": "Skill",
+      "name": "Regression Testing"
+    },
+    {
+      "@id": "skill:26",
+      "@type": "Skill",
+      "name": "CI/CD"
+    },
+    {
+      "@id": "skill:27",
+      "@type": "Skill",
+      "name": "Citation Gates"
+    },
+    {
+      "@id": "skill:28",
+      "@type": "Skill",
+      "name": "Datasets"
+    },
+    {
+      "@id": "public:capability-6",
+      "@type": "Evidence",
+      "name": "Streaming application interfaces",
+      "description": "Built live interfaces for model output, tool activity, approvals, cancellation, and checkpoint-based workflow recovery.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:29",
+      "@type": "Skill",
+      "name": "React"
+    },
+    {
+      "@id": "skill:30",
+      "@type": "Skill",
+      "name": "Next.js"
+    },
+    {
+      "@id": "skill:31",
+      "@type": "Skill",
+      "name": "FastAPI"
+    },
+    {
+      "@id": "skill:32",
+      "@type": "Skill",
+      "name": "SSE"
+    },
+    {
+      "@id": "skill:33",
+      "@type": "Skill",
+      "name": "Streaming APIs"
+    },
+    {
+      "@id": "skill:34",
+      "@type": "Skill",
+      "name": "Agent UX"
+    },
+    {
+      "@id": "public:capability-7",
+      "@type": "Evidence",
+      "name": "Cloud workflow orchestration",
+      "description": "Built cloud workflows with checkpointed steps, escalation, stall detection, bounded retries, and execution budgets.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:35",
+      "@type": "Skill",
+      "name": "AWS"
+    },
+    {
+      "@id": "skill:36",
+      "@type": "Skill",
+      "name": "Step Functions"
+    },
+    {
+      "@id": "skill:37",
+      "@type": "Skill",
+      "name": "Bedrock AgentCore"
+    },
+    {
+      "@id": "skill:38",
+      "@type": "Skill",
+      "name": "Cloud Architecture"
+    },
+    {
+      "@id": "skill:39",
+      "@type": "Skill",
+      "name": "Cost Controls"
+    },
+    {
+      "@id": "public:capability-8",
+      "@type": "Evidence",
+      "name": "Observability",
+      "description": "Instrumented services with traces, metrics, structured logs, request IDs, alerts, and dashboards.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:40",
+      "@type": "Skill",
+      "name": "OpenTelemetry"
+    },
+    {
+      "@id": "skill:41",
+      "@type": "Skill",
+      "name": "Prometheus"
+    },
+    {
+      "@id": "skill:42",
+      "@type": "Skill",
+      "name": "Grafana"
+    },
+    {
+      "@id": "skill:43",
+      "@type": "Skill",
+      "name": "Observability"
+    },
+    {
+      "@id": "skill:44",
+      "@type": "Skill",
+      "name": "Structured Logging"
+    },
+    {
+      "@id": "public:capability-9",
+      "@type": "Evidence",
+      "name": "Resumable workflows",
+      "description": "Built state-machine workflows with retries, pause-for-clarification, approval steps, and an operator interface.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:45",
+      "@type": "Skill",
+      "name": "State Machines"
+    },
+    {
+      "@id": "skill:46",
+      "@type": "Skill",
+      "name": "Alpine.js"
+    },
+    {
+      "@id": "public:capability-10",
+      "@type": "Evidence",
+      "name": "Authorized enterprise APIs",
+      "description": "Built AI-callable data-platform tools with per-user authentication and role-based authorization.",
+      "url": "#skills",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:47",
+      "@type": "Skill",
+      "name": "Keycloak"
+    },
+    {
+      "@id": "skill:48",
+      "@type": "Skill",
+      "name": "Authorization"
+    },
+    {
+      "@id": "skill:49",
+      "@type": "Skill",
+      "name": "Enterprise Integration"
+    },
+    {
+      "@id": "public:capability-11",
+      "@type": "Evidence",
+      "name": "Backend and data engineering",
+      "description": "Delivered production REST APIs in Python and Java, with Elasticsearch, Redis caching, and Spark parallel processing.",
+      "url": "#experience",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:50",
+      "@type": "Skill",
+      "name": "Java"
+    },
+    {
+      "@id": "skill:51",
+      "@type": "Skill",
+      "name": "REST APIs"
+    },
+    {
+      "@id": "skill:52",
+      "@type": "Skill",
+      "name": "Redis"
+    },
+    {
+      "@id": "skill:53",
+      "@type": "Skill",
+      "name": "Spark"
+    },
+    {
+      "@id": "skill:54",
+      "@type": "Skill",
+      "name": "Elasticsearch"
+    },
+    {
+      "@id": "skill:55",
+      "@type": "Skill",
+      "name": "Backend Engineering"
+    },
+    {
+      "@id": "public:capability-12",
+      "@type": "Evidence",
+      "name": "Delivery and quality gates",
+      "description": "Built CI/CD workflows with automated test, secret, dependency, and deployment checks.",
+      "url": "#experience",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:56",
+      "@type": "Skill",
+      "name": "Jenkins"
+    },
+    {
+      "@id": "skill:57",
+      "@type": "Skill",
+      "name": "GitHub Actions"
+    },
+    {
+      "@id": "skill:58",
+      "@type": "Skill",
+      "name": "Bitbucket Pipelines"
+    },
+    {
+      "@id": "skill:59",
+      "@type": "Skill",
+      "name": "Security Testing"
+    },
+    {
+      "@id": "public:rag-lab",
+      "@type": "Project",
+      "name": "Local RAG Lab",
+      "description": "A public Python lab demonstrating hybrid, long-context, and contextual retrieval with local models, cited answers, and output validation.",
+      "url": "https://github.com/krishnadheerajkrovi/mastering_rag",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "public:rag-chatbot",
+      "@type": "Project",
+      "name": "Multi-user RAG Chatbot",
+      "description": "A public document Q&A application with JWT authentication, history-aware retrieval, local models, persistent storage, and Docker Compose.",
+      "url": "https://github.com/krishnadheerajkrovi/rag-chatbot",
+      "evidenceLevel": "reviewed-public"
+    },
+    {
+      "@id": "skill:60",
+      "@type": "Skill",
+      "name": "Streamlit"
+    },
+    {
+      "@id": "skill:61",
+      "@type": "Skill",
+      "name": "LangChain"
+    },
+    {
+      "@id": "skill:62",
+      "@type": "Skill",
+      "name": "Chroma"
+    },
+    {
+      "@id": "skill:63",
+      "@type": "Skill",
+      "name": "Docker"
+    }
+  ],
+  "edges": [
+    {
+      "source": "person:krishna",
+      "target": "public:capability-1",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:1",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:2",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:3",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:4",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:5",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-1",
+      "target": "skill:6",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-2",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:7",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:8",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:9",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:10",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:11",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-2",
+      "target": "skill:12",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-3",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:11",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:13",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:14",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:15",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:16",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-3",
+      "target": "skill:7",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-4",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:17",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:18",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:19",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:4",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:20",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:21",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-4",
+      "target": "skill:22",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-5",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:23",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:24",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:25",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:26",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:27",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-5",
+      "target": "skill:28",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-6",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:29",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:30",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:31",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:32",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:33",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-6",
+      "target": "skill:34",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-7",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:35",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:36",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:37",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:38",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:5",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-7",
+      "target": "skill:39",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-8",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-8",
+      "target": "skill:40",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-8",
+      "target": "skill:41",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-8",
+      "target": "skill:42",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-8",
+      "target": "skill:43",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-8",
+      "target": "skill:44",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-9",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-9",
+      "target": "skill:1",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-9",
+      "target": "skill:31",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-9",
+      "target": "skill:3",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-9",
+      "target": "skill:45",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-9",
+      "target": "skill:46",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-10",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-10",
+      "target": "skill:8",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-10",
+      "target": "skill:31",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-10",
+      "target": "skill:47",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-10",
+      "target": "skill:48",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-10",
+      "target": "skill:49",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-11",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:7",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:50",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:51",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:52",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:53",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:54",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-11",
+      "target": "skill:55",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:capability-12",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:capability-12",
+      "target": "skill:26",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-12",
+      "target": "skill:56",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-12",
+      "target": "skill:57",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-12",
+      "target": "skill:58",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:capability-12",
+      "target": "skill:59",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:rag-lab",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:rag-lab",
+      "target": "skill:7",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-lab",
+      "target": "skill:17",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-lab",
+      "target": "skill:14",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-lab",
+      "target": "skill:19",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-lab",
+      "target": "skill:4",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "person:krishna",
+      "target": "public:rag-chatbot",
+      "type": "HAS_PUBLIC_EVIDENCE"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:31",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:60",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:61",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:1",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:14",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:4",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:62",
+      "type": "DEMONSTRATES_SKILL"
+    },
+    {
+      "source": "public:rag-chatbot",
+      "target": "skill:63",
+      "type": "DEMONSTRATES_SKILL"
+    }
+  ]
+}
